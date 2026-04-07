@@ -99,11 +99,11 @@ Use the files in [images](/home/dallas/projects/azure-lab-2-virtual-network-nsg/
 15. [15-inbound-rules-before-custom.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/15-inbound-rules-before-custom.png)  
     Inbound security rules page before custom SSH rules were added.
 16. [16-add-allow-ssh-myip-sensitive.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/16-add-allow-ssh-myip-sensitive.png)  
-    Allow rule for SSH from the current public IP. `TODO: Redact the source IP before embedding in a public README.`
+    Allow rule for SSH from the current public IP. The repository copy is redacted in place for public-safe publishing.
 17. [17-add-deny-ssh-internet-sensitive.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/17-add-deny-ssh-internet-sensitive.png)  
-    Deny rule for SSH from any other source. `TODO: Redact the visible public IP shown elsewhere on the page before embedding in a public README.`
+    Deny rule for SSH from any other source. The repository copy is redacted in place for public-safe publishing.
 18. [18-inbound-rules-with-custom-rules-sensitive.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/18-inbound-rules-with-custom-rules-sensitive.png)  
-    Inbound rules list showing both custom rules. `TODO: Redact the source IP before embedding in a public README.`
+    Inbound rules list showing both custom rules. The repository copy is redacted in place for public-safe publishing.
 19. [19-nsg-subnet-association-page.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/19-nsg-subnet-association-page.png)  
     NSG subnet association page with `public-subnet` selected.
 20. [20-nsg-attached-to-public-subnet.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/20-nsg-attached-to-public-subnet.png)  
@@ -113,7 +113,7 @@ Use the files in [images](/home/dallas/projects/azure-lab-2-virtual-network-nsg/
 22. [22-final-vnet-subnets-page.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/22-final-vnet-subnets-page.png)  
     Final VNet subnets page showing both `public-subnet` and `private-subnet`.
 23. [23-final-nsg-overview-sensitive.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/23-final-nsg-overview-sensitive.png)  
-    Final NSG overview showing custom inbound rules and subnet association. `TODO: Redact the source IP before embedding in a public README.`
+    Final NSG overview showing custom inbound rules and subnet association. The repository copy is redacted in place for public-safe publishing.
 24. [24-final-nsg-subnets-page.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/24-final-nsg-subnets-page.png)  
     Final NSG subnets page showing only `public-subnet` attached.
 
@@ -127,6 +127,7 @@ Use the files in [images](/home/dallas/projects/azure-lab-2-virtual-network-nsg/
 ## Problems Encountered / Notes
 
 - Several screenshots expose the real public IP used in the SSH allow rule. Those images should be redacted before public portfolio publishing.
+- The repository copies of the public-IP screenshots were redacted in place before publishing.
 - The NSG was associated only with `public-subnet`.
 - `private-subnet` was left unassociated to this NSG by design, which is visible in the final NSG subnets page showing only one attached subnet.
 - `TODO`: If you want to claim end-to-end validation with deployed workloads later, add a follow-up lab that places test resources into each subnet.

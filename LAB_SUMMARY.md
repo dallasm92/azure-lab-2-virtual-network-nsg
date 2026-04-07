@@ -4,4 +4,4 @@
 - Created and configured `nsg-lab-network` with ordered custom inbound SSH rules: `Allow-SSH-MyIP` at priority `1000` and `Deny-SSH-Internet` at priority `1010`.
 - Applied the NSG only to `public-subnet`, leaving `private-subnet` separate by design to support a more restricted internal segment.
 - Documented the full Azure portal workflow with screenshot evidence covering resource creation, subnet design, NSG rule configuration, and final validation views.
-- Identified public-IP exposure in several NSG screenshots and flagged those images for redaction before public publishing.
+- Redacted the public-IP screenshots in place so the published repo is safer to share publicly.
