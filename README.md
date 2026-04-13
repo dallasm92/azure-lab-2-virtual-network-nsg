@@ -142,3 +142,8 @@ Use the files in [images](/home/dallas/projects/azure-lab-2-virtual-network-nsg/
 ## Outcome
 
 The lab produced a working Azure network foundation with one VNet, two subnets, and a subnet-level NSG design. The final state shows `public-subnet` protected by custom SSH access rules while `private-subnet` remains separate for a more restricted follow-up design.
+
+## Repository Notes
+
+- This repo is the network-foundation step in the Azure lab series.
+- The screenshots folder was prepared for public-safe publishing by redacting public-IP exposure where needed.
