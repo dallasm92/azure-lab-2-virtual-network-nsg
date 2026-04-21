@@ -37,6 +37,16 @@ Build a basic Azure network foundation by creating a resource group, deploying a
 - The NSG was associated only with `public-subnet`.
 - `private-subnet` was intentionally left separate by design instead of being attached to the NSG shown in this lab.
 
+## Hiring Manager Quick View
+
+| Review area | Evidence |
+|---|---|
+| Cloud networking | VNet address space plus separate public/private subnet design |
+| Access control | NSG custom allow rule for trusted SSH source and broader deny rule |
+| Scope control | NSG associated only to `public-subnet`, with `private-subnet` left separate by design |
+| Security handling | Public-IP screenshots redacted before publication |
+| Follow-on design | This repo forms the network foundation reused by the Azure Linux VM/Nginx lab |
+
 ## Steps Performed
 
 1. Created the resource group `rg-azure-lab-network`.
@@ -66,55 +76,55 @@ Build a basic Azure network foundation by creating a resource group, deploying a
 
 ## Screenshots
 
-Use the files in [images](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images) as the evidence set for this lab.
+Use the files in [images](images/) as the evidence set for this lab.
 
-1. [01-resource-group-create-page.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/01-resource-group-create-page.png)  
+1. [01-resource-group-create-page.png](images/01-resource-group-create-page.png)
    Resource group creation form with `rg-azure-lab-network` and `East US`.
-2. [02-resource-group-review-create.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/02-resource-group-review-create.png)  
+2. [02-resource-group-review-create.png](images/02-resource-group-review-create.png)
    Review and create page for the new resource group.
-3. [03-resource-group-overview.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/03-resource-group-overview.png)  
+3. [03-resource-group-overview.png](images/03-resource-group-overview.png)
    Resource group overview after creation.
-4. [04-virtual-networks-landing.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/04-virtual-networks-landing.png)  
+4. [04-virtual-networks-landing.png](images/04-virtual-networks-landing.png)
    Azure virtual networks landing page before the VNet exists.
-5. [05-virtual-network-basics.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/05-virtual-network-basics.png)  
+5. [05-virtual-network-basics.png](images/05-virtual-network-basics.png)
    Create virtual network basics page for `vnet-lab-network`.
-6. [06-edit-public-subnet.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/06-edit-public-subnet.png)  
+6. [06-edit-public-subnet.png](images/06-edit-public-subnet.png)
    Public subnet edited to `10.20.1.0/24`.
-7. [07-add-private-subnet.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/07-add-private-subnet.png)  
+7. [07-add-private-subnet.png](images/07-add-private-subnet.png)
    Private subnet added as `10.20.2.0/24`.
-8. [08-ip-addresses-both-subnets.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/08-ip-addresses-both-subnets.png)  
+8. [08-ip-addresses-both-subnets.png](images/08-ip-addresses-both-subnets.png)
    IP addresses page showing both subnets in the VNet.
-9. [09-vnet-review-create.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/09-vnet-review-create.png)  
+9. [09-vnet-review-create.png](images/09-vnet-review-create.png)
    Review and create page for the VNet.
-10. [10-vnet-deployment-complete.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/10-vnet-deployment-complete.png)  
+10. [10-vnet-deployment-complete.png](images/10-vnet-deployment-complete.png)
     VNet deployment completed successfully.
-11. [11-nsg-landing-page.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/11-nsg-landing-page.png)  
+11. [11-nsg-landing-page.png](images/11-nsg-landing-page.png)
     Azure NSG landing page before the NSG exists.
-12. [12-nsg-basics-page.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/12-nsg-basics-page.png)  
+12. [12-nsg-basics-page.png](images/12-nsg-basics-page.png)
     NSG basics page for `nsg-lab-network`.
-13. [13-nsg-review-create.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/13-nsg-review-create.png)  
+13. [13-nsg-review-create.png](images/13-nsg-review-create.png)
     Review and create page for the NSG.
-14. [14-nsg-deployment-complete.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/14-nsg-deployment-complete.png)  
+14. [14-nsg-deployment-complete.png](images/14-nsg-deployment-complete.png)
     NSG deployment completed successfully.
-15. [15-inbound-rules-before-custom.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/15-inbound-rules-before-custom.png)  
+15. [15-inbound-rules-before-custom.png](images/15-inbound-rules-before-custom.png)
     Inbound security rules page before custom SSH rules were added.
-16. [16-add-allow-ssh-myip-sensitive.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/16-add-allow-ssh-myip-sensitive.png)  
+16. [16-add-allow-ssh-myip-sensitive.png](images/16-add-allow-ssh-myip-sensitive.png)
     Allow rule for SSH from the current public IP. The repository copy is redacted in place for public-safe publishing.
-17. [17-add-deny-ssh-internet-sensitive.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/17-add-deny-ssh-internet-sensitive.png)  
+17. [17-add-deny-ssh-internet-sensitive.png](images/17-add-deny-ssh-internet-sensitive.png)
     Deny rule for SSH from any other source. The repository copy is redacted in place for public-safe publishing.
-18. [18-inbound-rules-with-custom-rules-sensitive.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/18-inbound-rules-with-custom-rules-sensitive.png)  
+18. [18-inbound-rules-with-custom-rules-sensitive.png](images/18-inbound-rules-with-custom-rules-sensitive.png)
     Inbound rules list showing both custom rules. The repository copy is redacted in place for public-safe publishing.
-19. [19-nsg-subnet-association-page.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/19-nsg-subnet-association-page.png)  
+19. [19-nsg-subnet-association-page.png](images/19-nsg-subnet-association-page.png)
     NSG subnet association page with `public-subnet` selected.
-20. [20-nsg-attached-to-public-subnet.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/20-nsg-attached-to-public-subnet.png)  
+20. [20-nsg-attached-to-public-subnet.png](images/20-nsg-attached-to-public-subnet.png)
     NSG successfully associated to `public-subnet`.
-21. [21-final-vnet-overview.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/21-final-vnet-overview.png)  
+21. [21-final-vnet-overview.png](images/21-final-vnet-overview.png)
     Final VNet overview showing the address space and subnet count.
-22. [22-final-vnet-subnets-page.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/22-final-vnet-subnets-page.png)  
+22. [22-final-vnet-subnets-page.png](images/22-final-vnet-subnets-page.png)
     Final VNet subnets page showing both `public-subnet` and `private-subnet`.
-23. [23-final-nsg-overview-sensitive.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/23-final-nsg-overview-sensitive.png)  
+23. [23-final-nsg-overview-sensitive.png](images/23-final-nsg-overview-sensitive.png)
     Final NSG overview showing custom inbound rules and subnet association. The repository copy is redacted in place for public-safe publishing.
-24. [24-final-nsg-subnets-page.png](/home/dallas/projects/azure-lab-2-virtual-network-nsg/images/24-final-nsg-subnets-page.png)  
+24. [24-final-nsg-subnets-page.png](images/24-final-nsg-subnets-page.png)
     Final NSG subnets page showing only `public-subnet` attached.
 
 ## What I Learned
@@ -130,14 +140,14 @@ Use the files in [images](/home/dallas/projects/azure-lab-2-virtual-network-nsg/
 - The repository copies of the public-IP screenshots were redacted in place before publishing.
 - The NSG was associated only with `public-subnet`.
 - `private-subnet` was left unassociated to this NSG by design, which is visible in the final NSG subnets page showing only one attached subnet.
-- `TODO`: If you want to claim end-to-end validation with deployed workloads later, add a follow-up lab that places test resources into each subnet.
+- End-to-end workload validation is handled as follow-on scope in the Azure Linux VM/Nginx lab, which reuses this network foundation.
 
 ## Cost Control and Cleanup
 
 - This lab stayed focused on networking configuration rather than deployed compute resources.
 - No NAT gateway, Azure Firewall, or Bastion deployment is shown in the evidence set.
 - Keeping the lab at the resource-definition level is a good way to practice networking basics while minimizing cost exposure.
-- `TODO`: Confirm whether `rg-azure-lab-network` was deleted after the lab if you want the repo to claim full cleanup completion.
+- Final resource deletion is not claimed in this public writeup because the current evidence set focuses on network build and validation, not cleanup screenshots.
 
 ## Outcome
 
