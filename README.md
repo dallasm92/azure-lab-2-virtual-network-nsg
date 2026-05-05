@@ -1,5 +1,8 @@
 # Azure Lab 2: Virtual Network, Subnets, and NSG
 
+Social preview asset:
+- [assets/social-preview.png](assets/social-preview.png)
+
 ## Objective
 
 Build a basic Azure network foundation by creating a resource group, deploying a virtual network with separate public and private subnets, creating a network security group (NSG), adding custom inbound SSH rules, and associating the NSG only with the public subnet.
